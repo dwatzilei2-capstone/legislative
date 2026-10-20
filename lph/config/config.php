@@ -10,10 +10,11 @@
  */
 
 // ---- Database credentials ----------------------------------------
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'legislative_management_db');
-define('DB_USER', 'root');
-define('DB_PASS', '');
+define('DB_HOST', getenv('DB_HOST') ?: 'localhost');
+define('DB_PORT', getenv('DB_PORT') ?: '3306');
+define('DB_NAME', getenv('DB_DATABASE') ?: (getenv('DB_NAME') ?: 'legislative_management_db'));
+define('DB_USER', getenv('DB_USERNAME') ?: (getenv('DB_USER') ?: 'root'));
+define('DB_PASS', getenv('DB_PASSWORD') !== false ? getenv('DB_PASSWORD') : (getenv('DB_PASS') !== false ? getenv('DB_PASS') : ''));
 define('DB_CHARSET', 'utf8mb4');
 
 // ---- Application settings -----------------------------------------

@@ -16,11 +16,11 @@ if (!defined('APP_URL')) {
     define('APP_URL', $detectedAppUrl);
 }
 
-const DB_HOST = '127.0.0.1';
-const DB_PORT = '3306';
-const DB_NAME = 'legislative_management_db';
-const DB_USER = 'root';
-const DB_PASS = '';
+define('DB_HOST', getenv('DB_HOST') ?: '127.0.0.1');
+define('DB_PORT', getenv('DB_PORT') ?: '3306');
+define('DB_NAME', getenv('DB_DATABASE') ?: (getenv('DB_NAME') ?: 'legislative_management_db'));
+define('DB_USER', getenv('DB_USERNAME') ?: (getenv('DB_USER') ?: 'root'));
+define('DB_PASS', getenv('DB_PASSWORD') !== false ? getenv('DB_PASSWORD') : (getenv('DB_PASS') !== false ? getenv('DB_PASS') : ''));
 
 const SHARED_SESSION_NAME = 'lph_session';
 const SESSION_IDLE_TIMEOUT = 28800; // 8 hours

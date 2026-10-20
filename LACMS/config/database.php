@@ -3,11 +3,11 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/app.php';
 
-if (!defined('DB_HOST')) define('DB_HOST', '127.0.0.1');
-if (!defined('DB_PORT')) define('DB_PORT', '3306');
-if (!defined('DB_NAME')) define('DB_NAME', 'legislative_management_db');
-if (!defined('DB_USER')) define('DB_USER', 'root');
-if (!defined('DB_PASS')) define('DB_PASS', '');
+if (!defined('DB_HOST')) define('DB_HOST', getenv('DB_HOST') ?: '127.0.0.1');
+if (!defined('DB_PORT')) define('DB_PORT', getenv('DB_PORT') ?: '3306');
+if (!defined('DB_NAME')) define('DB_NAME', getenv('DB_DATABASE') ?: (getenv('DB_NAME') ?: 'legislative_management_db'));
+if (!defined('DB_USER')) define('DB_USER', getenv('DB_USERNAME') ?: (getenv('DB_USER') ?: 'root'));
+if (!defined('DB_PASS')) define('DB_PASS', getenv('DB_PASSWORD') !== false ? getenv('DB_PASSWORD') : (getenv('DB_PASS') !== false ? getenv('DB_PASS') : ''));
 
 function db(): PDO
 {
