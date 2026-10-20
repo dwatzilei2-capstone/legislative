@@ -1,0 +1,148 @@
+.of-head{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;margin-bottom:1rem;padding:1.15rem 1.3rem;background:#fff;border:1px solid #e2e8f0;border-left:5px solid #b8860b;border-radius:14px;box-shadow:0 5px 18px rgba(10,22,40,.05)}
+.of-head h1{margin:.15rem 0 0;color:#0a1628;font-size:1.4rem;font-weight:800}.of-head p{max-width:900px;margin:.3rem 0 0;color:#64748b;font-size:.73rem}.of-eyebrow{color:#b8860b;font-size:.61rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.of-card{overflow:hidden;background:#fff;border:1px solid #e2e8f0;border-radius:13px;box-shadow:0 4px 16px rgba(10,22,40,.04)}.of-card>.card-header{color:#071426;background:#fff;border-bottom:1px solid #e2e8f0;font-weight:800;padding:.85rem 1.15rem}
+.of-stat{display:flex;align-items:center;gap:.65rem;min-height:82px;padding:.75rem;background:#fff;border:1px solid #e2e8f0;border-bottom:3px solid #b8860b;border-radius:11px}.of-stat i{display:flex;align-items:center;justify-content:center;width:38px;height:38px;color:#1a3a5c;background:#eef5fb;border-radius:9px}.of-stat strong{display:block;color:#0a1628;font-size:1.15rem}.of-stat small{color:#64748b;font-size:.57rem;text-transform:uppercase}
+.of-table thead th{color:#fff;background:#0f2137;border-bottom:3px solid #b8860b;font-size:.62rem;text-transform:uppercase;white-space:nowrap}.of-table td{font-size:.73rem;vertical-align:middle}
+.of-code{font-family:Consolas,monospace;font-size:.66rem;font-weight:700;color:#0a1628;background:#fdf8ea;border:1px solid #e5c46d;border-radius:6px;padding:.15rem .35rem}
+.of-status{display:inline-flex;padding:.25rem .5rem;border-radius:999px;font-size:.58rem;font-weight:800;background:#eef2ff;color:#3730a3}.of-status.good{background:#d1fae5;color:#065f46}.of-status.warn{background:#fdf8ea;color:#92400e}.of-status.bad{background:#fee2e2;color:#991b1b}
+.of-flow{display:grid;grid-template-columns:repeat(6,1fr);gap:.5rem;margin-bottom:1rem}.of-flow>div{padding:.7rem;background:#f8fafc;border:1px solid #e2e8f0;border-top:3px solid #1a3a5c;border-radius:99px}.of-flow strong{display:block;color:#000000 !important;font-size:.64rem;font-weight:850}.of-flow small{color:#111827 !important;font-size:.54rem;font-weight:650}
+.of-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.65rem}.of-grid>div{padding:.65rem;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px}.of-grid small{display:block;color:#94a3b8;font-size:.52rem;text-transform:uppercase;font-weight:800}.of-grid strong{color:#334155;font-size:.7rem}
+.of-history{display:grid;gap:.5rem}.of-history>div{padding:.65rem .75rem;background:#f8fafc;border-left:4px solid #b8860b;border-radius:7px}.of-history strong{display:block;color:#334155;font-size:.65rem}.of-history small{color:#64748b;font-size:.53rem}
+.of-alert{padding:.75rem;background:#fdf8ea;border:1px solid #e5c46d;border-left:5px solid #b8860b;border-radius:9px;font-size:.65rem;color:#475569}
+.of-compare{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}.of-compare>div{min-width:0}.of-compare h6{font-size:.68rem;color:#334155}.of-codebody{white-space:pre-wrap;font-family:Georgia,serif;line-height:1.65;font-size:.75rem;color:#1f2937;background:#fff;border:1px solid #e5e7eb;border-radius:9px;padding:.85rem;max-height:560px;overflow:auto}
+.of-change{padding:.7rem;background:#f8fafc;border:1px solid #e2e8f0;border-left:4px solid #1a3a5c;border-radius:8px}.of-change p{font-size:.64rem;margin:.3rem 0;color:#475569}.of-change small{font-size:.52rem;color:#64748b}
+.of-stage{display:grid;grid-template-columns:repeat(8,minmax(90px,1fr));gap:.45rem}.of-stage>div{padding:.55rem;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;text-align:center}.of-stage strong{display:block;font-size:.55rem;color:#334155}.of-stage span{display:block;font-size:.9rem;font-weight:800;color:#0a1628}
+.of-progress{height:8px;background:#e2e8f0;border-radius:999px;overflow:hidden}.of-progress span{display:block;height:100%;background:#1a3a5c}
+.of-user-access{display:inline-flex;align-items:center;gap:.3rem;padding:.2rem .45rem;border-radius:999px;font-size:.58rem;font-weight:700}.of-user-access.active{color:#065f46;background:#d1fae5}.of-user-access.inactive{color:#991b1b;background:#fee2e2}.of-user-access.legacy{color:#92400e;background:#fdf8ea}
+.of-agent{max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#64748b;font-size:.57rem}
+.of-chartbox{position:relative;min-height:260px;padding:.8rem}
+@media(max-width:1100px){.of-flow{grid-template-columns:repeat(3,1fr)}.of-stage{grid-template-columns:repeat(4,1fr)}}@media(max-width:760px){.of-head{flex-direction:column}.of-flow,.of-grid,.of-compare,.of-stage{grid-template-columns:1fr}}
+
+/* ============================================================
+   ORLMS FINAL OPERATIONS - MODAL VIEWPORT / SCROLL FIX
+   Applies to Amendment & Revision Tracking and other final-op
+   pages that use this stylesheet.
+   ============================================================ */
+
+.modal.fade {
+    overflow-y: hidden;
+}
+
+.modal.fade .modal-dialog {
+    width: auto;
+    max-width: calc(100% - 2rem);
+    margin: 1rem auto;
+    max-height: calc(100vh - 2rem);
+}
+
+.modal.fade .modal-content {
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100vh - 2rem);
+    overflow: hidden;
+}
+
+/*
+ * Most ORLMS operational modals wrap their header/body/footer
+ * inside a form. The form must also be a flex container so the
+ * body is allowed to shrink and become scrollable.
+ */
+.modal.fade .modal-content > form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 0;
+    max-height: calc(100vh - 2rem);
+}
+
+.modal.fade .modal-header,
+.modal.fade .modal-footer {
+    flex: 0 0 auto;
+}
+
+.modal.fade .modal-body {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: #94a3b8 #f1f5f9;
+}
+
+.modal.fade .modal-body::-webkit-scrollbar {
+    width: 9px;
+}
+
+.modal.fade .modal-body::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+.modal.fade .modal-body::-webkit-scrollbar-thumb {
+    background: #94a3b8;
+    border: 2px solid #f1f5f9;
+    border-radius: 999px;
+}
+
+.modal.fade .modal-body::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}
+
+/*
+ * Bootstrap's modal-dialog-scrollable class gets an explicit
+ * viewport-safe height so the header/footer remain visible.
+ */
+.modal.fade .modal-dialog-scrollable {
+    height: calc(100vh - 2rem);
+    max-height: calc(100vh - 2rem);
+}
+
+.modal.fade .modal-dialog-scrollable .modal-content {
+    height: 100%;
+    max-height: 100%;
+}
+
+.modal.fade .modal-dialog-scrollable .modal-content > form {
+    height: 100%;
+    max-height: 100%;
+}
+
+.modal.fade .modal-footer {
+    position: relative;
+    z-index: 5;
+    background: #fff;
+    border-top: 1px solid #e2e8f0;
+}
+
+/* Mobile / short-screen handling */
+@media (max-width: 760px), (max-height: 700px) {
+    .modal.fade .modal-dialog {
+        width: calc(100% - 1rem);
+        max-width: calc(100% - 1rem);
+        margin: .5rem auto;
+        max-height: calc(100vh - 1rem);
+    }
+
+    .modal.fade .modal-content,
+    .modal.fade .modal-content > form {
+        max-height: calc(100vh - 1rem);
+    }
+
+    .modal.fade .modal-dialog-scrollable {
+        height: calc(100vh - 1rem);
+        max-height: calc(100vh - 1rem);
+    }
+
+    .modal.fade .modal-body {
+        padding-bottom: 1rem;
+    }
+}
+
+/* Do not print open modal overlays. */
+@media print {
+    .modal,
+    .modal-backdrop {
+        display: none !important;
+    }
+}
+

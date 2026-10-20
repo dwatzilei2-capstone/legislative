@@ -1,0 +1,948 @@
+/* ============================================================
+   ORLMS DRAFTING + REVIEW
+   Complete styling
+   ============================================================ */
+
+.orx-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+
+    margin-bottom: 1rem;
+    padding: 1.15rem 1.3rem;
+
+    background: #fff;
+
+    border: 1px solid #e2e8f0;
+    border-left: 5px solid #b8860b;
+    border-radius: 14px;
+
+    box-shadow: 0 5px 18px rgba(10, 22, 40, .05);
+}
+
+.orx-head .btn-primary,
+.of-head .btn-primary,
+.orl-head .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.42rem 0.95rem;
+    font-size: 0.82rem;
+    font-weight: 750;
+    color: #ffffff !important;
+    background: linear-gradient(135deg, #071426 0%, #1a3a5c 100%) !important;
+    border: 1px solid #071426 !important;
+    border-radius: 9px;
+    box-shadow: 0 3px 10px rgba(7, 20, 38, 0.18);
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.orx-head .btn-primary:hover,
+.of-head .btn-primary:hover,
+.orl-head .btn-primary:hover {
+    background: linear-gradient(135deg, #b8860b 0%, #d49b0e 100%) !important;
+    border-color: #b8860b !important;
+    box-shadow: 0 4px 14px rgba(184, 134, 11, 0.35);
+    transform: translateY(-1px);
+}
+
+.orx-head h1 {
+    margin: .2rem 0 0;
+    color: #071426;
+    font-size: 1.65rem;
+    font-weight: 850;
+}
+
+.orx-head p {
+    max-width: 920px;
+    margin: .45rem 0 0;
+    color: #475569;
+    font-size: .88rem;
+    line-height: 1.5;
+}
+
+.orx-eyebrow {
+    color: #b8860b;
+    font-size: .72rem;
+    font-weight: 850;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+}
+
+
+/* ============================================================
+   CARDS
+   ============================================================ */
+
+.orx-card {
+    overflow: hidden;
+
+    background: #fff;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 13px;
+
+    box-shadow: 0 4px 16px rgba(10, 22, 40, .04);
+}
+
+.orx-card > .card-header {
+    color: #071426;
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 0.95rem;
+    font-weight: 850;
+    padding: 0.95rem 1.25rem;
+}
+
+
+/* ============================================================
+   STAT CARDS
+   ============================================================ */
+
+.orx-stat,
+.orx-stat-card {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    min-height: 88px;
+    padding: 0.9rem 1.1rem;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #071426;
+    border-radius: 13px;
+    box-shadow: 0 4px 18px rgba(10, 22, 40, .05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.orx-stat:hover,
+.orx-stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(10, 22, 40, .09);
+}
+
+.orx-stat i,
+.orx-stat-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: #eef5fb;
+    color: #1a3a5c;
+    border-radius: 11px;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+.orx-stat-info,
+.orx-stat > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.orx-stat strong,
+.orx-stat-info strong {
+    display: block;
+    color: #0a1628;
+    font-size: 1.55rem;
+    font-weight: 850;
+    line-height: 1;
+}
+
+.orx-stat small,
+.orx-stat-info small {
+    color: #64748b;
+    font-size: 0.68rem;
+    font-weight: 750;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    margin-top: 0.3rem;
+}
+
+
+/* ============================================================
+   TABLE
+   ============================================================ */
+
+.orx-table thead th {
+    color: #475569;
+    background: #f8fafc;
+    border-bottom: 2px solid #e2e8f0;
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    padding: 0.85rem 1rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.orx-table td {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: #1e293b;
+    padding: 0.85rem 1rem;
+    vertical-align: middle;
+}
+
+.orx-code {
+    display: inline-block;
+    padding: 0.25rem 0.55rem;
+    color: #0a1628;
+    background: #fdf8ea;
+    border: 1px solid #e5c46d;
+    border-radius: 6px;
+    font-family: Consolas, monospace;
+    font-size: 0.82rem;
+    font-weight: 750;
+}
+
+
+/* ============================================================
+   WORKFLOW (CLEAN TRANSPARENT STEPPER)
+   ============================================================ */
+
+.orx-flow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .4rem;
+    margin-bottom: 1.25rem;
+    padding: .75rem 0;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.orx-step-item {
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+    flex: 1;
+    min-width: 0;
+    padding: .2rem;
+}
+
+.orx-step-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background: #f8fafc;
+    color: #b8860b;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 1.05rem;
+    flex-shrink: 0;
+    transition: all .2s ease;
+}
+
+.orx-step-item.active .orx-step-badge,
+.orx-step-item:hover .orx-step-badge {
+    background: #b8860b;
+    color: #fff;
+    border-color: #b8860b;
+    box-shadow: 0 3px 10px rgba(184, 134, 11, .25);
+}
+
+.orx-step-content {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.orx-step-content strong {
+    color: #000000 !important;
+    font-size: .8rem;
+    font-weight: 850;
+    line-height: 1.25;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.orx-step-content small {
+    color: #111827 !important;
+    font-size: .63rem;
+    font-weight: 650;
+    margin-top: .1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.orx-step-divider {
+    color: #94a3b8;
+    font-size: .85rem;
+    flex-shrink: 0;
+}
+
+
+/* ============================================================
+   DETAIL GRID
+   ============================================================ */
+
+.orx-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+}
+
+.orx-grid > div {
+    padding: 0.85rem 1rem;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+}
+
+.orx-grid small {
+    display: block;
+    color: #64748b;
+    font-size: 0.7rem;
+    font-weight: 750;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+}
+
+.orx-grid strong {
+    color: #0f172a;
+    font-size: 0.92rem;
+    font-weight: 750;
+}
+
+
+/* ============================================================
+   HISTORY
+   ============================================================ */
+
+.orx-history {
+    display: grid;
+    gap: 0.65rem;
+}
+
+.orx-history > div {
+    padding: 0.85rem 1rem;
+    background: #f8fafc;
+    border-left: 4px solid #b8860b;
+    border-radius: 9px;
+}
+
+.orx-history strong {
+    display: block;
+    color: #0f172a;
+    font-size: 0.85rem;
+    font-weight: 800;
+}
+
+.orx-history small {
+    color: #64748b;
+    font-size: 0.78rem;
+    line-height: 1.45;
+    display: block;
+    margin-top: 0.25rem;
+}
+
+
+/* ============================================================
+   AUTHORS
+   ============================================================ */
+
+.orx-author-row {
+    display: grid;
+
+    grid-template-columns:
+        1.6fr
+        1fr
+        1.4fr
+        1.4fr
+        42px;
+
+    gap: .45rem;
+
+    margin-bottom: .45rem;
+}
+
+.orx-author-row .btn {
+    height: 38px;
+}
+
+
+/* ============================================================
+   BODY PREVIEW
+   ============================================================ */
+
+.orx-body-preview {
+    overflow: auto;
+    max-height: 540px;
+    padding: 1.25rem;
+    color: #1e293b;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 11px;
+    font-family: Georgia, serif;
+    font-size: 0.98rem;
+    line-height: 1.75;
+    white-space: pre-wrap;
+}
+
+
+/* ============================================================
+   ALERT
+   ============================================================ */
+
+.orx-alert {
+    padding: 0.9rem 1.1rem;
+    color: #334155;
+    background: #fdf8ea;
+    border: 1px solid #e5c46d;
+    border-left: 5px solid #b8860b;
+    border-radius: 10px;
+    font-size: 0.88rem;
+    line-height: 1.55;
+}
+
+
+/* ============================================================
+   REVIEW CHECKLIST
+   ============================================================ */
+
+.orx-review-check {
+    display: grid;
+
+    grid-template-columns:
+        minmax(260px, 1fr)
+        145px
+        1fr
+        80px;
+
+    align-items: center;
+
+    gap: .55rem;
+
+    padding: .7rem;
+
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.orx-review-check:last-child {
+    border-bottom: 0;
+}
+
+
+/* ============================================================
+   COMMENTS
+   ============================================================ */
+
+.orx-comment {
+    padding: .75rem;
+
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #b8860b;
+    border-radius: 8px;
+}
+
+.orx-comment strong {
+    font-size: .68rem;
+}
+
+.orx-comment p {
+    margin: .35rem 0;
+
+    color: #475569;
+
+    font-size: .66rem;
+}
+
+.orx-comment small {
+    color: #64748b;
+
+    font-size: .52rem;
+}
+
+
+/* ============================================================
+   STATUS
+   ============================================================ */
+
+.orx-status {
+    display: inline-flex;
+
+    padding: .25rem .5rem;
+
+    color: #3730a3;
+    background: #eef2ff;
+
+    border-radius: 999px;
+
+    font-size: .58rem;
+    font-weight: 800;
+}
+
+.orx-status.good {
+    color: #065f46;
+    background: #d1fae5;
+}
+
+.orx-status.warn {
+    color: #92400e;
+    background: #fdf8ea;
+}
+
+.orx-status.bad {
+    color: #991b1b;
+    background: #fee2e2;
+}
+
+
+/* ============================================================
+   ORDINANCE / RESOLUTION DRAFT MODAL
+   ============================================================ */
+
+/*
+ * The modal itself stays inside the viewport.
+ * Header and footer stay visible.
+ * Only the middle form content scrolls.
+ */
+
+#draftModal {
+    overflow-y: hidden !important;
+}
+
+#draftModal .modal-dialog {
+    width: auto;
+
+    max-width: 1260px;
+
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+
+    height: calc(100vh - 2.5rem);
+    max-height: calc(100vh - 2.5rem);
+}
+
+#draftModal .modal-content {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+    max-height: calc(100vh - 2.5rem);
+
+    overflow: hidden;
+
+    border: 0;
+    border-radius: 14px;
+
+    box-shadow:
+        0 20px 60px rgba(2, 8, 23, .30);
+}
+
+
+/*
+ * Important:
+ * The form itself must also participate in the
+ * flex layout so modal-body can shrink and scroll.
+ */
+
+#draftModal #draftForm {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+
+    min-height: 0;
+}
+
+
+/* ============================================================
+   DRAFT MODAL HEADER
+   ============================================================ */
+
+#draftModal .modal-header {
+    flex: 0 0 auto;
+
+    padding: 1rem 1.25rem;
+
+    color: #fff;
+
+    background: linear-gradient(
+        135deg,
+        #0a1628,
+        #1a3a5c
+    ) !important;
+
+    border-bottom: 4px solid #b8860b;
+}
+
+#draftModal .modal-title {
+    margin: 0;
+
+    color: #fff;
+
+    font-size: 1.15rem;
+    font-weight: 800;
+}
+
+#draftModal .btn-close {
+    flex: 0 0 auto;
+}
+
+
+/* ============================================================
+   DRAFT MODAL BODY
+   ============================================================ */
+
+#draftModal .modal-body {
+    flex: 1 1 auto;
+
+    min-height: 0;
+
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+
+    padding: 1rem;
+
+    background: #fff;
+
+    overscroll-behavior: contain;
+
+    scrollbar-width: thin;
+    scrollbar-color: #94a3b8 #f1f5f9;
+}
+
+
+/* Chrome / Edge scrollbar */
+
+#draftModal .modal-body::-webkit-scrollbar {
+    width: 10px;
+}
+
+#draftModal .modal-body::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+#draftModal .modal-body::-webkit-scrollbar-thumb {
+    background: #94a3b8;
+
+    border: 2px solid #f1f5f9;
+    border-radius: 999px;
+}
+
+#draftModal .modal-body::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}
+
+
+/* ============================================================
+   DRAFT MODAL FOOTER
+   ============================================================ */
+
+#draftModal .modal-footer {
+    flex: 0 0 auto;
+
+    position: relative;
+    z-index: 10;
+
+    padding: .8rem 1rem;
+
+    background: #fff;
+
+    border-top: 1px solid #e2e8f0;
+
+    box-shadow:
+        0 -4px 15px rgba(15, 23, 42, .04);
+}
+
+
+/* ============================================================
+   DRAFT MODAL FORM CONTROLS
+   ============================================================ */
+
+#draftModal .form-label {
+    margin-bottom: .35rem;
+
+    color: #334155;
+
+    font-size: .78rem;
+    font-weight: 600;
+}
+
+#draftModal .form-control,
+#draftModal .form-select {
+    min-height: 42px;
+
+    border-color: #d8e0e9;
+    border-radius: 8px;
+
+    font-size: .82rem;
+}
+
+#draftModal textarea.form-control {
+    min-height: 80px;
+
+    resize: vertical;
+}
+
+#draftModal #d_body {
+    min-height: 310px;
+
+    line-height: 1.45;
+}
+
+#draftModal .form-control:focus,
+#draftModal .form-select:focus {
+    border-color: #3b82f6;
+
+    box-shadow:
+        0 0 0 .18rem rgba(59, 130, 246, .12);
+}
+
+#draftModal .form-text {
+    color: #64748b;
+
+    font-size: .68rem;
+}
+
+
+/* ============================================================
+   AUTHOR SECTION INSIDE MODAL
+   ============================================================ */
+
+#draftModal #authorRows {
+    width: 100%;
+}
+
+#draftModal .orx-author-row {
+    padding: .55rem;
+
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+}
+
+
+/* ============================================================
+   SUBMIT FOR REVIEW MODAL
+   ============================================================ */
+
+/*
+ * This modal is shorter, but use the same safe behavior
+ * in case more fields are added later.
+ */
+
+#submitModal {
+    overflow-y: auto;
+}
+
+#submitModal .modal-dialog {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+
+    max-height: calc(100vh - 3rem);
+}
+
+#submitModal .modal-content {
+    display: flex;
+    flex-direction: column;
+
+    max-height: calc(100vh - 3rem);
+
+    overflow: hidden;
+
+    border: 0;
+    border-radius: 14px;
+}
+
+#submitModal form {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 0;
+}
+
+#submitModal .modal-header {
+    flex: 0 0 auto;
+
+    color: #fff;
+
+    background: linear-gradient(
+        135deg,
+        #0a1628,
+        #1a3a5c
+    ) !important;
+
+    border-bottom: 4px solid #b8860b;
+}
+
+#submitModal .modal-body {
+    flex: 1 1 auto;
+
+    min-height: 0;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#submitModal .modal-footer {
+    flex: 0 0 auto;
+
+    background: #fff;
+
+    border-top: 1px solid #e2e8f0;
+}
+
+
+/* ============================================================
+   MODAL BACKDROP / OPEN STATE
+   ============================================================ */
+
+body.modal-open {
+    overflow: hidden;
+}
+
+.modal-backdrop.show {
+    opacity: .68;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 1200px) {
+
+    #draftModal .modal-dialog {
+        width: calc(100% - 2rem);
+        max-width: calc(100% - 2rem);
+    }
+
+}
+
+
+@media (max-width: 1000px) {
+
+    .orx-head {
+        flex-direction: column;
+    }
+
+    .orx-flow {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .orx-author-row,
+    .orx-review-check {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    #draftModal .modal-dialog {
+        width: calc(100% - 2rem);
+
+        margin: 1rem auto;
+
+        height: calc(100vh - 2rem);
+        max-height: calc(100vh - 2rem);
+    }
+
+    #draftModal .modal-content {
+        max-height: calc(100vh - 2rem);
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    #draftModal .modal-body {
+        padding: .8rem;
+    }
+
+    #draftModal .modal-header {
+        padding: .85rem 1rem;
+    }
+
+    #draftModal .modal-footer {
+        padding: .7rem .8rem;
+    }
+
+    #draftModal #d_body {
+        min-height: 260px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .orx-flow,
+    .orx-grid,
+    .orx-author-row,
+    .orx-review-check {
+        grid-template-columns: 1fr;
+    }
+
+    #draftModal .modal-dialog {
+        width: calc(100% - 1rem);
+
+        margin: .5rem auto;
+
+        height: calc(100vh - 1rem);
+        max-height: calc(100vh - 1rem);
+    }
+
+    #draftModal .modal-content {
+        max-height: calc(100vh - 1rem);
+
+        border-radius: 10px;
+    }
+
+    #draftModal .modal-footer {
+        display: flex;
+
+        flex-wrap: nowrap;
+    }
+
+    #draftModal .modal-footer .btn {
+        flex: 1;
+    }
+
+    #draftModal .orx-author-row {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: .4rem;
+    }
+
+    #draftModal .orx-author-row .btn {
+        width: 100%;
+    }
+
+}
+
+
+/* ============================================================
+   PRINT
+   ============================================================ */
+
+@media print {
+
+    #draftModal,
+    #submitModal {
+        display: none !important;
+    }
+
+    .orx-card,
+    .orx-head,
+    .orx-stat {
+        box-shadow: none !important;
+    }
+
+}

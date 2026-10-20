@@ -1,0 +1,7 @@
+<?php
+declare(strict_types=1);
+require_once __DIR__.'/../../includes/lacms_sync_helpers.php';
+requireLacmsPermission('lacms.sync.manage');
+if($_SERVER['REQUEST_METHOD']!=='POST')jsonResponse(false,'Invalid request method.');requireCsrf();
+$pdo=db();$id=(int)($_POST['sync_record_id']??0);$s=lacmsSyncContext($pdo,$id);if(!$s)jsonResponse(false,'Coordination record not found.');if(empty($_FILES['document']))jsonResponse(false,'Choose a document.');
+try{$up=handleUpload($_FILES['document'],'lacms/synchronization');if(!$up['success'])jsonResponse(false,$up['message']);$visibility=clean($_POST['visibility']??'Internal');if(!in_array($visibility,['Public','Internal','Restricted'],true))$visibility='Internal';$pdo->prepare('INSERT INTO lacms_sync_documents (sync_record_id,file_name,file_path,document_type,description,visibility,uploaded_by,uploaded_at) VALUES(:sync,:name,:path,:type,:description,:visibility,:user,NOW())')->execute([':sync'=>$id,':name'=>$up['file_name'],':path'=>$up['file_path'],':type'=>clean($_POST['document_type']??'Coordination Document'),':description'=>trim((string)($_POST['description']??''))?:null,':visibility'=>$visibility,':user'=>currentUserId()]);lacmsSyncHistory($pdo,$id,'Upload Document',$s['status'],$s['status'],'Coordination document uploaded.');lacmsAudit('Upload','LACMS Sync Document',(string)$pdo->lastInsertId(),null,['sync_record_id'=>$id,'file_name'=>$up['file_name']]);jsonResponse(true,'Coordination document uploaded.');}catch(Throwable $e){jsonResponse(false,APP_DEBUG?$e->getMessage():'Unable to upload document.');}

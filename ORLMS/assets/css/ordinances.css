@@ -1,0 +1,698 @@
+/* ==========================================================
+   ordinances.css
+   ORLMS — Ordinance Drafting & Encoding Module
+   Coastal Blue / Government Portal Theme
+   ========================================================== */
+
+/* ---------- Module header ---------- */
+.ordinance-page-header,
+.ordinance-detail-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-bottom: 1.25rem;
+    padding: 1.3rem 1.5rem;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-left: 5px solid #b8860b;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(15, 33, 55, 0.06);
+}
+
+.module-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 0.3rem;
+    color: #b8860b;
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.ordinance-page-header h1,
+.ordinance-detail-header h1 {
+    margin: 0;
+    color: #0a1628;
+    font-size: 1.35rem;
+    font-weight: 800;
+}
+
+.ordinance-page-header p {
+    margin: 0.35rem 0 0;
+    color: #64748b;
+    font-size: 0.8rem;
+}
+
+.module-header-actions,
+.ordinance-detail-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+}
+
+/* ---------- Summary cards ---------- */
+.ordinance-summary-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 125px;
+    padding: 1rem 1.15rem;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-bottom: 3px solid #b8860b;
+    border-radius: 13px;
+    box-shadow: 0 5px 18px rgba(15, 33, 55, 0.06);
+    transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.ordinance-summary-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(74, 126, 181, 0.45);
+    box-shadow: 0 12px 28px rgba(15, 33, 55, 0.1);
+}
+
+.ordinance-summary-card .summary-icon {
+    position: absolute;
+    top: 0.9rem;
+    right: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 39px;
+    height: 39px;
+    color: #1a3a5c;
+    background: #eff6ff;
+    border-radius: 10px;
+}
+
+.ordinance-summary-card strong {
+    margin-top: 0.2rem;
+    color: #0a1628;
+    font-size: 1.85rem;
+    font-weight: 850;
+}
+
+.ordinance-summary-card > span:last-child {
+    margin-top: auto;
+    color: #64748b;
+    font-size: 0.67rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+/* ---------- Search and filters ---------- */
+.ordinance-filter-panel {
+    margin-bottom: 1.25rem;
+    padding: 1rem 1.15rem;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 13px;
+    box-shadow: 0 4px 16px rgba(15, 33, 55, 0.05);
+}
+
+.ordinance-filter-panel .form-label {
+    color: #475569;
+    font-size: 0.68rem;
+    font-weight: 700;
+}
+
+.ordinance-filter-panel .input-group-text {
+    color: #1a3a5c;
+    background: #f8fafc;
+    border-color: #dbe4ee;
+}
+
+/* ---------- Main table card ---------- */
+.ordinance-table-card,
+.ordinance-detail-panel {
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(15, 33, 55, 0.06);
+}
+
+.table-card-header,
+.ordinance-panel-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.9rem 1.15rem;
+    color: #ffffff;
+    background: linear-gradient(135deg, #0a1628, #1a3a5c);
+    border-bottom: 3px solid #b8860b;
+}
+
+.table-card-header h2,
+.ordinance-panel-heading h2 {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 750;
+}
+
+.table-card-header h2 i,
+.ordinance-panel-heading h2 i {
+    margin-right: 0.4rem;
+    color: #b8860b;
+}
+
+.table-card-header p,
+.ordinance-panel-heading p {
+    margin: 0.2rem 0 0;
+    color: rgba(255, 255, 255, 0.58);
+    font-size: 0.66rem;
+}
+
+.table-view-actions {
+    display: flex;
+    gap: 0.35rem;
+}
+
+.table-view-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    color: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.07);
+    border: none;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.table-view-button.active,
+.table-view-button:hover {
+    color: #b8860b;
+    background: rgba(245, 200, 66, 0.14);
+}
+
+/* ---------- Ordinance table ---------- */
+.ordinance-table thead th {
+    padding: 0.8rem;
+    color: #ffffff;
+    background: #102a46;
+    border-color: rgba(255, 255, 255, 0.08);
+    font-size: 0.63rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.ordinance-table tbody td {
+    padding: 0.8rem;
+    color: #475569;
+    font-size: 0.73rem;
+    vertical-align: middle;
+}
+
+.ordinance-table tbody tr {
+    transition: background 0.18s ease;
+}
+
+.ordinance-table tbody tr:hover {
+    background: #f8fafc;
+}
+
+.ordinance-reference {
+    color: #1a3a5c;
+    font-family: Consolas, monospace;
+    font-weight: 750;
+}
+
+.ordinance-title-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.ordinance-title-cell strong {
+    color: #0f172a;
+    font-size: 0.75rem;
+}
+
+.ordinance-title-cell small {
+    color: #94a3b8;
+    font-size: 0.62rem;
+}
+
+.priority-badge,
+.ordinance-status-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.28rem 0.55rem;
+    border-radius: 999px;
+    font-size: 0.61rem;
+    font-weight: 750;
+}
+
+.priority-badge {
+    color: #92400e;
+    background: #fdf8ea;
+}
+
+.ordinance-status-badge {
+    color: #1d4ed8;
+    background: #dbeafe;
+}
+
+.ordinance-row-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+}
+
+.row-action-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 31px;
+    height: 31px;
+    color: #1a3a5c;
+    background: #ffffff;
+    border: 1px solid #dbe4ee;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.row-action-button:hover {
+    color: #ffffff;
+    background: #1a3a5c;
+    border-color: #1a3a5c;
+}
+
+.row-action-button.danger {
+    color: #b91c1c;
+}
+
+.row-action-button.danger:hover {
+    color: #ffffff;
+    background: #b91c1c;
+    border-color: #b91c1c;
+}
+
+.ordinance-table-footer {
+    padding: 0.75rem 1rem;
+    color: #64748b;
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+    font-size: 0.67rem;
+}
+
+/* ---------- Empty state ---------- */
+.ordinance-empty-state {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.45rem;
+    min-height: 240px;
+    color: #94a3b8;
+    text-align: center;
+}
+
+.ordinance-empty-state i {
+    color: #cbd5e1;
+    font-size: 2.5rem;
+}
+
+.ordinance-empty-state strong {
+    color: #475569;
+    font-size: 0.85rem;
+}
+
+.ordinance-empty-state span {
+    max-width: 430px;
+    font-size: 0.7rem;
+}
+
+/* ---------- Modal shell ---------- */
+#ordinanceModal .modal-content {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 24px 70px rgba(10, 22, 40, 0.2);
+}
+
+#ordinanceModal .modal-header {
+    padding: 1rem 1.25rem;
+    border-bottom: 3px solid #b8860b;
+}
+
+#ordinanceModal .modal-title {
+    color: #0a1628;
+    font-weight: 800;
+}
+
+#ordinanceModal .modal-body {
+    background: #ffffff;
+}
+
+#ordinanceModal .modal-footer {
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+}
+
+/* ---------- Multi-step form ---------- */
+.ordinance-form-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.55rem;
+    margin-bottom: 1.4rem;
+}
+
+.form-step {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-height: 48px;
+    padding: 0.55rem 0.65rem;
+    color: #64748b;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 9px;
+    font-size: 0.67rem;
+    font-weight: 700;
+    text-align: left;
+    transition: all 0.2s ease;
+}
+
+.form-step:hover {
+    color: #0f2137;
+    border-color: #b8c7d9;
+}
+
+.form-step span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    flex: 0 0 26px;
+    color: #64748b;
+    background: #e2e8f0;
+    border-radius: 50%;
+}
+
+.form-step.active {
+    color: #0a1628;
+    background: #fdf8ea;
+    border-color: #b8860b;
+}
+
+.form-step.active span {
+    color: #0a1628;
+    background: #b8860b;
+}
+
+.ordinance-form-section {
+    display: none;
+}
+
+.ordinance-form-section.active {
+    display: block;
+    animation: ordinanceFadeIn 0.2s ease;
+}
+
+@keyframes ordinanceFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section-heading {
+    margin-bottom: 1rem;
+    padding-bottom: 0.7rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.section-heading h6 {
+    margin: 0;
+    color: #0a1628;
+    font-weight: 800;
+}
+
+.section-heading p {
+    margin: 0.2rem 0 0;
+    color: #64748b;
+    font-size: 0.7rem;
+}
+
+.ordinance-content-editor {
+    min-height: 240px;
+    font-family: Georgia, serif;
+    line-height: 1.7;
+    resize: vertical;
+}
+
+/* ---------- Upload area ---------- */
+.ordinance-upload-area {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.4rem;
+    min-height: 180px;
+    padding: 1.5rem;
+    color: #64748b;
+    background: #f8fafc;
+    border: 2px dashed #cbd5e1;
+    border-radius: 12px;
+    text-align: center;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.ordinance-upload-area:hover {
+    background: #f1f5f9;
+    border-color: #4a7eb5;
+}
+
+.ordinance-upload-area > i {
+    color: #4a7eb5;
+    font-size: 2.5rem;
+}
+
+.ordinance-upload-area strong {
+    color: #334155;
+}
+
+.ordinance-upload-area span {
+    font-size: 0.68rem;
+}
+
+.ordinance-upload-area input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.selected-file-list {
+    display: grid;
+    gap: 0.5rem;
+    margin-top: 0.8rem;
+}
+
+.selected-file-item {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.6rem 0.75rem;
+    color: #475569;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 0.7rem;
+}
+
+.selected-file-item i {
+    color: #1a3a5c;
+}
+
+.selected-file-item span {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.selected-file-item small {
+    color: #94a3b8;
+}
+
+/* ---------- Detail page styles (future-ready) ---------- */
+.ordinance-back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-bottom: 0.5rem;
+    color: #b8860b;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.ordinance-detail-reference {
+    margin-bottom: 0.25rem;
+    color: #64748b;
+    font-family: Consolas, monospace;
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+.ordinance-workflow {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    overflow-x: auto;
+    padding: 1.5rem 1rem;
+}
+
+.ordinance-workflow-step {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-width: 110px;
+    color: #94a3b8;
+    text-align: center;
+}
+
+.ordinance-workflow-step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 18px;
+    left: calc(50% + 22px);
+    width: calc(100% - 44px);
+    height: 2px;
+    background: #e2e8f0;
+}
+
+.ordinance-workflow-circle {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 37px;
+    height: 37px;
+    color: #64748b;
+    background: #e2e8f0;
+    border-radius: 50%;
+    font-size: 0.7rem;
+    font-weight: 800;
+}
+
+.ordinance-workflow-name {
+    margin-top: 0.45rem;
+    font-size: 0.62rem;
+    font-weight: 700;
+}
+
+.ordinance-workflow-step.completed .ordinance-workflow-circle {
+    color: #ffffff;
+    background: #10b981;
+}
+
+.ordinance-workflow-step.current .ordinance-workflow-circle {
+    color: #0a1628;
+    background: #b8860b;
+    box-shadow: 0 0 0 5px rgba(245, 200, 66, 0.17);
+}
+
+.ordinance-workflow-step.completed:not(:last-child)::after {
+    background: #10b981;
+}
+
+.ordinance-information-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 1.2rem;
+}
+
+.ordinance-information-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.8rem;
+    background: #f8fafc;
+    border-radius: 9px;
+}
+
+.ordinance-information-item span {
+    color: #94a3b8;
+    font-size: 0.61rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.ordinance-information-item strong {
+    color: #334155;
+    font-size: 0.75rem;
+}
+
+.ordinance-content-section {
+    margin: 0 1.2rem;
+    padding: 1rem 0;
+    border-top: 1px solid #e2e8f0;
+}
+
+.ordinance-content-section h3 {
+    color: #0a1628;
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+.ordinance-content-section p {
+    color: #64748b;
+    font-size: 0.73rem;
+    line-height: 1.7;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 992px) {
+    .ordinance-page-header,
+    .ordinance-detail-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .module-header-actions,
+    .ordinance-detail-actions {
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .ordinance-form-steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .ordinance-form-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .ordinance-information-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .module-header-actions .btn {
+        flex: 1 1 auto;
+    }
+}

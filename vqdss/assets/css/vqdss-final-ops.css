@@ -1,0 +1,181 @@
+.vqdf-head{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;margin-bottom:1rem;padding:1.15rem 1.3rem;background:#fff;border:1px solid #e2e8f0;border-left:5px solid #b8860b;border-radius:14px;box-shadow:0 5px 18px rgba(10,22,40,.05)}
+.vqdf-head h1{margin:.15rem 0 0;color:#0a1628;font-size:1.4rem;font-weight:800}.vqdf-head p{max-width:850px;margin:.3rem 0 0;color:#64748b;font-size:.73rem}.vqdf-eyebrow{color:#b8860b;font-size:.61rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.vqdf-card{overflow:hidden;background:#fff;border:1px solid #e2e8f0;border-radius:13px;box-shadow:0 4px 16px rgba(10,22,40,.04)}.vqdf-card>.card-header{color:#0a1628;background:#fff;border-bottom:2px solid #e2e8f0;font-weight:700}
+.vqdf-stat{display:flex;align-items:center;gap:.65rem;min-height:82px;padding:.75rem;background:#fff;border:1px solid #e2e8f0;border-bottom:3px solid #b8860b;border-radius:11px}.vqdf-stat i{display:flex;align-items:center;justify-content:center;width:38px;height:38px;color:#1a3a5c;background:#eef5fb;border-radius:9px}.vqdf-stat strong{display:block;color:#0a1628;font-size:1.15rem}.vqdf-stat small{color:#64748b;font-size:.57rem;text-transform:uppercase}
+.vqdf-table thead th{color:#fff;background:#0f2137;border-bottom:3px solid #b8860b;font-size:.62rem;text-transform:uppercase;white-space:nowrap}.vqdf-table td{font-size:.73rem;vertical-align:middle}
+.vqdf-code{font-family:Consolas,monospace;font-size:.66rem;font-weight:700;color:#0a1628;background:#fff7d6;border:1px solid #f6df8a;border-radius:6px;padding:.15rem .35rem}
+.vqdf-flow{display:grid;grid-template-columns:repeat(5,1fr);gap:.55rem;margin-bottom:1rem}.vqdf-flow>div{padding:.72rem;background:#f8fafc;border:1px solid #e2e8f0;border-top:3px solid #1a3a5c;border-radius:9px}.vqdf-flow strong{display:block;color:#0a1628;font-size:.64rem}.vqdf-flow small{color:#64748b;font-size:.52rem}
+.vqdf-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.65rem}.vqdf-grid>div{padding:.65rem;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px}.vqdf-grid small{display:block;color:#94a3b8;font-size:.52rem;text-transform:uppercase;font-weight:800}.vqdf-grid strong{color:#334155;font-size:.7rem}
+.vqdf-history{display:grid;gap:.5rem}.vqdf-history>div{padding:.65rem .75rem;background:#f8fafc;border-left:4px solid #b8860b;border-radius:7px}.vqdf-history strong{display:block;color:#334155;font-size:.65rem}.vqdf-history small{color:#64748b;font-size:.53rem}
+.vqdf-check{display:grid;grid-template-columns:minmax(230px,1fr) 150px 110px;gap:.6rem;align-items:center;padding:.7rem;border-bottom:1px solid #e2e8f0}.vqdf-check:last-child{border-bottom:0}
+.vqdf-risk{display:inline-flex;padding:.25rem .5rem;border-radius:999px;font-size:.6rem;font-weight:800}.vqdf-risk.low{color:#065f46;background:#d1fae5}.vqdf-risk.medium{color:#92400e;background:#fef3c7}.vqdf-risk.high,.vqdf-risk.critical{color:#991b1b;background:#fee2e2}
+.vqdf-score{display:flex;align-items:center;gap:.8rem;padding:1rem;background:linear-gradient(135deg,#0a1628,#1a3a5c);color:#fff;border-bottom:4px solid #b8860b;border-radius:12px}.vqdf-score strong{font-size:2rem;color:#b8860b}.vqdf-score span{font-size:.65rem;color:rgba(255,255,255,.74)}
+.vqdf-trace{display:grid;grid-template-columns:repeat(5,1fr);gap:.7rem}.vqdf-trace a,.vqdf-trace>div{display:block;padding:.8rem;text-decoration:none;background:#fff;border:1px solid #e2e8f0;border-bottom:3px solid #b8860b;border-radius:10px}.vqdf-trace strong{display:block;color:#0a1628;font-size:.7rem}.vqdf-trace small{display:block;color:#64748b;font-size:.53rem;margin-top:.15rem}
+.vqdf-alert{padding:.75rem;background:#fffbea;border:1px solid #f6df8a;border-left:5px solid #b8860b;border-radius:9px;font-size:.65rem;color:#475569}
+@media(max-width:950px){.vqdf-head{flex-direction:column}.vqdf-flow,.vqdf-trace{grid-template-columns:1fr 1fr}.vqdf-check{grid-template-columns:1fr 1fr}}@media(max-width:600px){.vqdf-flow,.vqdf-grid,.vqdf-trace,.vqdf-check{grid-template-columns:1fr}}
+
+/* ============================================================
+   VQDSS MODAL VIEWPORT / SCROLL FIX
+   Keeps modal header/footer visible while the modal body scrolls.
+   ============================================================ */
+
+.modal {
+    overflow-y: hidden !important;
+}
+
+.modal .modal-dialog {
+    width: auto;
+    max-width: calc(100% - 2rem);
+
+    margin: 1rem auto;
+
+    height: calc(100vh - 2rem);
+    max-height: calc(100vh - 2rem);
+}
+
+.modal .modal-content {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+    max-height: calc(100vh - 2rem);
+
+    overflow: hidden;
+
+    border: 0;
+    border-radius: 14px;
+
+    box-shadow:
+        0 20px 60px rgba(2, 8, 23, .30);
+}
+
+/*
+ * Support modals whose header/body/footer are wrapped in a form.
+ */
+.modal .modal-content > form {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+
+    min-height: 0;
+    max-height: 100%;
+}
+
+.modal .modal-header {
+    flex: 0 0 auto;
+
+    position: relative;
+    z-index: 5;
+}
+
+.modal .modal-body {
+    flex: 1 1 auto;
+
+    min-height: 0;
+
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+
+    overscroll-behavior: contain;
+
+    scrollbar-width: thin;
+    scrollbar-color: #94a3b8 #f1f5f9;
+}
+
+.modal .modal-footer {
+    flex: 0 0 auto;
+
+    position: relative;
+    z-index: 5;
+
+    background: #fff;
+
+    border-top: 1px solid #e2e8f0;
+}
+
+/* Bootstrap modal-dialog-scrollable compatibility */
+.modal .modal-dialog-scrollable {
+    height: calc(100vh - 2rem);
+    max-height: calc(100vh - 2rem);
+}
+
+.modal .modal-dialog-scrollable .modal-content {
+    height: 100%;
+    max-height: 100%;
+}
+
+.modal .modal-dialog-scrollable .modal-content > form {
+    height: 100%;
+    max-height: 100%;
+}
+
+/* Chrome / Edge scrollbar */
+.modal .modal-body::-webkit-scrollbar {
+    width: 9px;
+}
+
+.modal .modal-body::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+.modal .modal-body::-webkit-scrollbar-thumb {
+    background: #94a3b8;
+
+    border: 2px solid #f1f5f9;
+    border-radius: 999px;
+}
+
+.modal .modal-body::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+/* Smaller screens / short-height laptops */
+@media (max-width: 760px), (max-height: 700px) {
+
+    .modal .modal-dialog {
+        width: calc(100% - 1rem);
+        max-width: calc(100% - 1rem);
+
+        margin: .5rem auto;
+
+        height: calc(100vh - 1rem);
+        max-height: calc(100vh - 1rem);
+    }
+
+    .modal .modal-content,
+    .modal .modal-content > form {
+        max-height: calc(100vh - 1rem);
+    }
+
+    .modal .modal-dialog-scrollable {
+        height: calc(100vh - 1rem);
+        max-height: calc(100vh - 1rem);
+    }
+
+    .modal .modal-body {
+        padding-bottom: 1rem;
+    }
+
+    .modal .modal-footer {
+        flex-wrap: nowrap;
+    }
+
+    .modal .modal-footer .btn {
+        flex: 1;
+    }
+}
+
+@media print {
+    .modal,
+    .modal-backdrop {
+        display: none !important;
+    }
+}
+
